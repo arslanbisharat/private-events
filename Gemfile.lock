@@ -240,6 +240,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   devise
   jbuilder (~> 2.7)
+  parser
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.1)
   rubocop
