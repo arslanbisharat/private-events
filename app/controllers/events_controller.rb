@@ -36,7 +36,7 @@ class EventsController < ApplicationController
         redirect_to events_url
     else
       flash[:alert] = 'Something went wrong'
-      redirect_to events_url
+        redirect_to events_url
     end
   end
 
