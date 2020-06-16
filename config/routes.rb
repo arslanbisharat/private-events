@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users
+  resources :events
   root to: "users#index"
 end
