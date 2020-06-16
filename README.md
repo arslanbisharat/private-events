@@ -66,14 +66,11 @@ Then, go to [http://localhost:3000/](http://localhost:3000/)
 
 Bazinga!
 
-## Author
+👤 **Muhammad Arslan**
 
-👤 **Azamat Nuriddinov**
-
-- Github: [@bettercallazamat](https://github.com/bettercallazamat)
-- Twitter: [@azamat_nuriddin](https://twitter.com/azamat_nuriddin)
-- Linkedin: [Azamat Nuriddinov](https://www.linkedin.com/in/azamat-nuriddinov-57579868)
-
+- Github: [@githubhandle](https://github.com/arslanbisharat)
+- Twitter: [@twitterhandle](https://twitter.com/arslan_bisharat-2020bb156)
+- Linkedin: [linkedin](https://www.linkedin.com/in/muhammad-arslan-2020bb156)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
