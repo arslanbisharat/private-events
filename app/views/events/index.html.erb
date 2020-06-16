@@ -6,11 +6,11 @@
 
   <div class="col-4">
     <h2>Upcomming Events</h2>
-    <% @future_events.each do |event| %>
+    <% @events.future.each do |event| %>
       <div class="card">
         <div class="card-body">
           <h5 class="card-title"><%= link_to event.event_name, event_path(event) %></h5>
-          <h6 class="card-subtitle mb-2 text-muted">created by <%= link_to event.creator.username, user_path(event.creator) %></h6> 
+          <h6 class="card-subtitle mb-2 text-muted">created by <%= link_to event.creator.username, user_path(event.creator) %></h6>
           <p style="float:right;">When: <%= event.date %></p>
           <p>Location: <%= event.location %></p>
           <p class="card-text"><%= event.description %></p>
@@ -22,12 +22,12 @@
 
   <div class="col-4">
     <h2>Past Events</h2>
-    <% @past_events.each do |event| %>
+    <% @events.past.each do |event| %>
       <div class="card">
         <div class="card-body">
           <h5 class="card-title"><%= link_to event.event_name, event_path(event) %></h5>
           <h6 class="card-subtitle mb-2 text-muted">created by <%= link_to event.creator.username, user_path(event.creator) %></h6>
-           <p style="float:right;">When: <%= event.date %></p>
+          <p style="float:right;">When: <%= event.date %></p>
           <p>Location: <%= event.location %></p>
           <p class="card-text"><%= event.description %></p>
         </div>
@@ -35,4 +35,4 @@
     <% end %>
   </div>
 
-</div> 
+</div>

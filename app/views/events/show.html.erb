@@ -4,12 +4,16 @@
     <h1><%= @event.event_name %></h1>
     <p>Where: <%= @event.location %></p>
     <p>When: <%= @event.date %></p>
-      <p>Attendees: </p>
+    <p>Attendees: </p>
     <% @event.attendees.each do |attendee| %>
     <%= attendee.username %>
     <% end %>
 
-    <%= %>
+    <%= form_with(url: "/invitations", method: "post") do %>
+      <%= hidden_field_tag(:user_id, @user.id) %>
+      <%= hidden_field_tag(:event_id, @event.id) %>
+      <%= submit_tag("Sign Up") %>
+    <% end %>
   </div>
 </div>
 
@@ -17,4 +21,4 @@
   <div class="col">
   <%= link_to "<< Back", events_path %>
   </div>
-</div> 
+</div>
