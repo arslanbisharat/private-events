@@ -52,5 +52,8 @@ Style/HashEachMethods:
   Enabled: false
 Style/HashTransformKeys:
   Enabled: false
+tyle/IdenticalConditionalBranches:
+    Enabled: false
+
 Style/HashTransformValues:
   Enabled: false
