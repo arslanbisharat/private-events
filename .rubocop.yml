@@ -52,7 +52,7 @@ Style/HashEachMethods:
   Enabled: false
 Style/HashTransformKeys:
   Enabled: false
-style/IdenticalConditionalBranches:
+Style/IdenticalConditionalBranches:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
