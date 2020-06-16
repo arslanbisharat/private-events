@@ -1,15 +1,21 @@
+# frozen_string_literal: true
+
 class EventsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :destroy]
+  before_action :authenticate_user!, only: %i[new destroy]
 
   def index
-    @events = Event.all
+    @events = Event.future
   end
-  
+
+  def past
+    @events = Event.past
+  end
+
   def show
     @event = Event.find(params[:id])
     @user = current_user
   end
-  
+
   def new
     @event = Event.new
   end
@@ -17,10 +23,10 @@ class EventsController < ApplicationController
   def create
     @event = current_user.events.build(event_params)
     if @event.save
-      flash[:notice] = "Event successfully created"
+      flash[:notice] = 'Event successfully created'
       redirect_to @event
     else
-      flash[:alert] = "Something went wrong"
+      flash[:alert] = 'Something went wrong'
       render 'new'
     end
   end
@@ -35,13 +41,10 @@ class EventsController < ApplicationController
       redirect_to events_url
     end
   end
-  
+
   private
 
   def event_params
-
     params.require(:event).permit(:event_name, :description, :location, :date)
-
   end
-
 end

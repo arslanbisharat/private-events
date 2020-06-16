@@ -1,0 +1,28 @@
+<div class="row">
+
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Past Events</h3>
+        <h6 class="card-subtitle mb-2 text-muted"></h6>
+        <h6 class="card-subtitle mb-2 text-muted"></h6>
+        <p><%= link_to "Upcomming Events", events_path %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <% @events.each do |event| %>
+      <div class="card">
+        <div class="card-body">
+          <p style="float:right;" class="text-muted"><%= event.date %></p>
+          <h5 class="card-title"><%= link_to event.event_name, event_path(event) %></h5>
+          <p class="card-subtitle mb-2 text-muted"><small>created by <%= link_to event.creator.username, user_path(event.creator) %></small></p>
+          <p><small><%= event.location %></small></p>
+          <p class="card-text"><%= event.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div> 
