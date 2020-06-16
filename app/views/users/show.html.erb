@@ -1,3 +1,17 @@
-<h1><%= @user.name %></h1>
-<small><% @user.username %></small>
-<p><% @user.email %></p>
+<%# TODO needs work %>
+<div class="row">
+  <div class="col">
+
+    <h1><%= @user.name %></h1>
+    <small><%= @user.username %></small>
+    <p><%= @user.email %></p>
+
+    <h2>Events</h2>
+    <% @user.events.each do |event| %>
+      <h5><%= event.event_name %></h5>
+      <p><small><%= event.location %></small></p>
+    <% end %>
+
+    <%= link_to "<< Home", root_path %>
+  </div>
+</div>
