@@ -1,10 +1,10 @@
+# TODO change root to events index
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  
+  get 'static_pages/home'
   devise_for :users, :controllers => { registrations: 'registrations' }
+  #root to: 'users#index'
+  root to: 'static_pages#home'
   resources :users
   resources :events
   resources :invitations
-
-  root to: "users#index"
 end
