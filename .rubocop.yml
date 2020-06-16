@@ -38,7 +38,11 @@ Style/EachForSimpleLoop:
   Enabled: false
 Style/AndOr:
   Enabled: false
+Style/GlobalVars:
+  Enabled: false
 Style/DefWithParentheses:
+  Enabled: false
+Style/StringLiteralsInInterpolation:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
