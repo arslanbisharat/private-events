@@ -33,7 +33,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     if @event.destroy
       flash[:notice] = 'Event was successfully deleted.'
-      redirect_to events_url
+        redirect_to events_url
     else
       flash[:alert] = 'Something went wrong'
       redirect_to events_url
