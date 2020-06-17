@@ -1,4 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<p>name: <%= @user.name %> </p> 
+<p>email: <%= @user.email %> </p> 
+<p>address: <%= @user.address %> </p>
+
+<h3>created events</h3>
+
+
+<% @user.created_events.each do |event| %>
+
+<p> <%= event.title %> </p>
+<p> <%= event.description %> </p>
+<p> <%= event.location %> </p>
+<p> <%= event.date %> </p>
+    
+<% end %>
+
+<h3>attended events</h3>
+
+<% @user.attended_events.each do |event| %>
+
+<p> <%= event.title %> </p>
+<p> <%= event.description %> </p>
+<p> <%= event.location %> </p>
+<p> <%= event.date %> </p>
+    
+<% end %>
+
+
 <%= link_to 'Back', new_user_path %>
