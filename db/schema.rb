@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_17_163419) do
+ActiveRecord::Schema.define(version: 2020_05_25_203509) do
+
   create_table "events", force: :cascade do |t|
     t.datetime "date"
     t.text "description"
@@ -26,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_06_17_163419) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "attended_event_id"
     t.integer "attendee_id"
-    t.boolean "accepted"
+    t.boolean "accepted", default: false
   end
 
   create_table "users", force: :cascade do |t|
